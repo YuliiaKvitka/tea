@@ -1,0 +1,188 @@
+@import './../base/constants';
+@import './../utils/mixins';
+
+.blog {
+  margin-top: 150px;
+  padding-bottom: 150px;
+
+  @include mobile-small {
+    margin-top: 50px;
+    padding-bottom: 50px;
+    }
+
+  &__inner {
+    max-width: 1142px;
+    margin-inline: auto;
+
+    @include laptop-small {
+      max-width: 940px;
+    }
+
+    @include mobile-small {
+      max-width: 270px;
+    }
+  }
+
+  &__title {
+  z-index: 10;
+  color: var(--color-dark);
+  font-family: Cormorant;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 48px;
+  letter-spacing: 0%;
+  text-align: center;
+  margin-bottom: 60px;
+
+    @include laptop-small {
+      margin-bottom: 30px;
+    }
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
+    @include mobile-big {
+      margin-bottom: 30px;
+    }
+    @include mobile-small {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+}
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px 58px;
+
+    @include laptop-small {
+      gap: 67px 20px;
+    }
+    @include mobile-small {
+      gap: 0px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    gap: 20px;
+    width: 542px;
+    height: 100%;
+
+    @include laptop-small {
+      width: 460px;
+    }
+
+    @include mobile-small {
+      width: 270px;
+      flex-direction: column;
+      gap: 10px;
+      height: 357px;
+    }
+
+    &:nth-child(even){
+
+    @include tablet {
+      margin-left: 98px;
+    }
+    @include mobile-big {
+      margin-left: 0px;
+    }
+  }
+
+    &-image {
+
+      @include laptop-small {
+        width: 230px;
+        height: 153px;
+      }
+
+      @include mobile-small {
+        width: 270px;
+        height: auto;
+      }
+
+    }
+
+    &-wrapper {
+      height: 153px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include mobile-small {
+        width: 250px;
+        display: inline;
+      }
+    }
+
+    &-text {
+      color: var(--color-dark);
+      font-family: var(--second-family);
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 1.21;
+      letter-spacing: 0%;
+      text-align: left;
+      height: 86px;
+
+      @include laptop-small {
+        font-size: 21px;
+      }
+
+      @include mobile-big {
+        font-size: 16px;
+      }
+
+      @include mobile-small {
+        font-size: 20px;
+        margin: 0;
+        height: auto;
+      }
+    }
+
+    &-name {
+      color: var(--color-dark);
+      font-family: var(--font-family);
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 1.38;
+      letter-spacing: 0%;
+      text-align: left;
+    }
+
+    &-link {
+      color: var(--color-dark);
+      font-family: var(--font-family);
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 1.38;
+      letter-spacing: 0%;
+      text-align: left;
+    }
+  }
+
+  &__button {
+    display: block;
+    margin-inline:auto;
+    margin-top: 60px;
+    width: 150px;
+    height: 50px;
+    background-color: transparent;
+    box-sizing: border-box;
+    border: 1px solid var(--color-dark);
+    background-color: var(color-light);
+    color: var(--color-dark);
+    font-family: var(--font-family);
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.35;
+    letter-spacing: 0%;
+    text-align: center;
+    padding:12px 35px;
+
+    @include mobile-small {
+      margin-top: 0px;
+    }
+  }
+}

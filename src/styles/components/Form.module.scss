@@ -1,0 +1,61 @@
+@import './../base/constants';
+@import './../utils/mixins';
+
+
+.form {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 580px;
+  justify-content: center;
+
+  &__input {
+    max-width: 405px;
+    border: none;
+    border-bottom : 1px solid #b8b58b;
+    background-color: transparent;
+    padding: 3px 15px;
+    margin-right: 25px;
+
+    @include laptop-small {
+      max-width: 439px;
+    }
+
+    @include tablet {
+      max-width: 430px;
+    }
+
+    @include mobile-big {
+      max-width: 220px;
+    }
+
+    @include mobile-small {
+      max-width: 150px;
+    }
+
+    &::placeholder {
+      color: #b8b58b;
+      font-family: var(--font-family);
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 1.5;
+      letter-spacing: 0%;
+      text-align: left;
+    }
+  }
+
+  &__button {
+    width: 116px;
+    height: 51px;
+    box-sizing: border-box;
+    border: 1px solid var(--color-dark);
+    background: var(--color-light);
+    color: var(--color-dark);
+    font-family: Open Sans;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 27px;
+    letter-spacing: 0%;
+    text-align: center;
+  }
+}

@@ -1,0 +1,60 @@
+// Add global styles
+body {
+  margin: 0;
+  font-size: 20px;
+  font-family: var(--font-family) ;
+  color: var(--color-dark);
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+html, body {
+  height: 100%;
+}
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @include laptop-small {
+    max-width: 960px;
+  }
+
+  @include tablet {
+    max-width: 640px;
+  }
+
+  @include mobile-big {
+    max-width: 460px;
+    padding: 0 10px;
+  }
+
+  @include mobile-small {
+    max-width: 340px;
+  }
+
+}
+
+.main {
+  flex-grow: 1; //прижали футер вниз
+}

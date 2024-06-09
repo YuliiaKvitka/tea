@@ -1,0 +1,93 @@
+@import './../base/constants';
+@import './../utils/mixins';
+
+.knows {
+  position: relative;
+  background: var(--color-bg);
+  height: 418px;
+  background-image: url('/assets/knows/tea.png');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+
+  @include laptop-small {
+    height: 495px;
+  }
+
+  &__inner{
+    display: flex;
+    gap: 40px;
+
+    @include laptop-small {
+      display: flex;
+      flex-direction: column;
+    }
+    @include mobile-big {
+      gap: 30px;
+    }
+  }
+
+  &__wrapper {
+    max-width: 580px;
+    height: 120px;
+    
+    @include laptop-small {
+      margin: 0 auto;
+      max-width: 780px;
+      text-align: center;
+    }
+
+    @include tablet{
+    max-width: 640px;
+    }
+
+    @include mobile-big{
+    max-width: 410px;
+    }
+
+    @include mobile-small {
+      max-width: 330px;
+    }
+  }
+
+  &__title {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    color: var(--color-dark);
+    font-family: Cormorant;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 0%;
+    text-align: left;
+
+    @include laptop-small {
+      text-align: center;
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    @include mobile-big {
+      padding-top: 50px;
+      padding-bottom: 30px;
+    }
+    @include mobile-small {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+}
+
+  &__text {
+    color: var(--color-dark);
+
+@include mobile-big {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 18px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+}
+}
+
+// -------------
+

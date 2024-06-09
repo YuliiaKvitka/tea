@@ -1,0 +1,88 @@
+@import './../base/constants';
+@import './../utils/mixins';
+
+.collections {
+padding-bottom: 150px;
+
+    @include laptop-small {
+      padding-bottom: 120px;
+    }
+
+    @include mobile-big {
+      padding-bottom: 60px;
+    }
+      @include mobile-small {
+      padding-bottom: 80px;
+    }
+
+  &__title {
+    color: var(--color-dark);
+    font-family: var(--second-family);
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0%;
+    text-align:center;
+    margin-bottom: 60px;
+
+    @include laptop-small {
+      margin-bottom: 30px;
+    }
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
+    @include mobile-big {
+      margin-bottom: 30px;
+    }
+    @include mobile-small {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap:0 40px;
+    text-align: center;
+
+    @include laptop-small {
+      gap: 0px;
+    }
+
+    @include tablet {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__item {
+
+@include laptop-small {
+  margin-left: -20px;
+}
+}
+
+&__image {
+  width: 100%;
+
+  @include mobile-big {
+    max-width: 190px;
+    height: auto;
+  }
+  @include mobile-small {
+    max-width: 160px;
+    height: auto;
+  }
+}
+
+  &__image-title {
+    color: var(--color-dark);
+    font-family: var(--second-family);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.21x;
+    letter-spacing: 0%;
+    padding-top: 10px;
+  }
+}

@@ -1,0 +1,114 @@
+// MobileMenuModal.module.scss
+
+@import './../base/constants';
+@import './../utils/mixins';
+
+.menu {
+
+   &__btn {
+      position: absolute; // Позиционирование кнопки
+      top: 20px; // Отступ сверху
+      right: 20px; // Отступ справа
+      padding: 0; // Убираем внутренние отступы
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      z-index: 1001; // На один слой выше, чем само модальное окно
+    }
+
+    &__list--modal {
+      flex-direction: column;
+      gap: 30px; // Отступ между пунктами меню
+      display: flex;
+      align-items: center; // Центрирование пунктов меню по горизонтали
+      text-align: center; // Центрирование текста
+      width: 100%; // Ширина 100% для центрирования
+    }
+
+  &__modal {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 360px;
+    height: 691px;
+    background-color: var(--color-light);
+    display: none; // Скрыто по умолчанию
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    overflow-y: auto; // Добавлено для скролла, если содержимое больше высоты
+
+    @include tablet {
+      top: 0;
+    }
+
+    &--open {
+      display: flex; // Показываем модальное окно при наличии класса --open
+    }
+
+    &-line {
+      width: 300px;
+      height: 2px;
+      background: #f7f2ea;
+     
+    }
+
+    &__list--modal {
+      // Убираем внешние отступы у ul
+      margin: 0;
+      padding: 0;
+      width: 100%; // Ширина 100% для центрирования
+
+      &__item {
+        width: 100%;
+        text-align: center; // Центрирование текста
+      }
+    }
+  }
+
+  &__link {
+    color: rgb(0, 0, 0);
+    font-family: var(--second-family);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0%;
+    text-align: center;
+  }
+
+  &__link-line {
+    color: rgb(0, 0, 0);
+    font-family: var(--font-family);
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 18px;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+
+  &__modal-line {
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+    }
+}
+.user-actions {
+      background-color: #F7F2EA;
+      height: 60px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 70px;
+    }
+
+.top{
+  margin-top: 60px;
+  flex-direction: column;
+  gap: 30px; // Отступ между пунктами меню
+  display: flex;
+  align-items: center; // Центрирование пунктов меню по горизонтали
+  text-align: center; // Центрирование текста
+}

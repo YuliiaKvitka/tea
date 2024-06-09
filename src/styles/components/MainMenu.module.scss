@@ -1,0 +1,32 @@
+@import './../base/constants';
+@import './../utils/mixins';
+
+.menu {
+  width: 582px;
+
+  @include tablet {
+    display: flex;
+    align-items: center;
+    order: -1;
+  }
+
+&__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__link {
+    color: var(--color-dark);
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+}

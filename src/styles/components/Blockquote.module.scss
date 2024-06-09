@@ -1,0 +1,80 @@
+@import './../base/constants';
+@import './../utils/mixins';
+
+.blockquote {
+    margin-block: 150px;
+
+    
+
+    @include laptop-small {
+        margin-block: 120px;
+    }
+
+    @include tablet {
+        margin-block: 120px;
+    }
+
+    @include mobile-big {
+        margin-block: 60px;
+    }
+    @include mobile-small {
+        margin-block: 75px;
+    }
+
+    &__text {
+        text-align: center;
+        color: var(--color-dark);
+        font-family: var(--second-family);
+        font-size: 40px;
+        font-weight: 300;
+        line-height: 1.2;
+        letter-spacing: 0%;
+        font-style: italic;
+        max-width: 737px;
+        display: block;
+        margin-inline: auto;
+
+    @include mobile-big {
+        font-size: 16px;
+        line-height: 1.375;
+    }
+    }
+}
+
+.bg {
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: '';
+        background: rgb(247, 242, 234);
+        opacity: 0.5;
+        width: 359px;
+        height: 61px;
+        bottom: -15px;
+        right: 407px;
+        left: 0px;
+        z-index: -1;
+
+    @include laptop-small {
+        left: 0px;
+    }
+    @include tablet {
+        left:0;
+        width: 273px;
+    }
+
+    @include mobile-big {
+        left: 0px;
+        width: 118px;
+        height: 22px;
+        bottom: -5px;
+    }
+
+    @include mobile-small {
+        left: 0px;
+        width: 118px;
+        bottom: -5px;
+    }
+}
+}

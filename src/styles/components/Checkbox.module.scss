@@ -1,0 +1,61 @@
+@import './../base/constants';
+@import './../utils/mixins';
+
+.label-wrapper {
+  margin-top: 16px;
+}
+.checkbox {
+  position: absolute;
+  height: 1px;width: 1px;
+  clip:rect(0, 0, 0, 0);
+  overflow: hidden;
+
+&-style {
+  position: absolute;
+  box-sizing: border-box;
+  border: 1px solid var(--color-dark);
+  background: var(--color-light);
+  width: 10px;
+  height: 10px;
+  top: 70px;
+  left: 10px;
+
+    @include laptop-small {
+      left: 80px;
+    }
+
+    @include tablet {
+    left: 20px;
+    }
+
+    @include mobile-big {
+      left: 0px;
+    }
+}
+
+  &__text {
+    color: var(--color-dark);
+    font-family: var(--font-family);
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 18px;
+    letter-spacing: 0%;
+    text-align: left;
+    width: 500px;
+    margin-left: 0px;
+
+      @include laptop-small {
+        width: 560px;
+      }
+      @include mobile-big{
+        max-width: 390px;
+        margin-left: 20px;
+      }
+
+      @include mobile-small{
+        max-width: 330px;
+        margin-left: 40px;
+      }
+  }
+}
+

@@ -1,0 +1,104 @@
+@import './../base/constants';
+@import './../utils/mixins';
+
+.clients {
+  /* Light Background */
+background-color: var(--color-bg);
+// opacity: 0.5;
+padding-block: 60px;
+
+      @include mobile-small {
+      padding-block: 50px;
+    }
+
+&__title {
+  z-index: 10;
+  color: var(--color-dark);
+  font-family: Cormorant;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 48px;
+  letter-spacing: 0%;
+  text-align: center;
+  margin-bottom: 60px;
+
+    @include laptop-small {
+      margin-bottom: 30px;
+    }
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
+    @include mobile-big {
+      margin-bottom: 30px;
+    }
+    @include mobile-small {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+}
+
+&__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 26px;
+
+    @include tablet {
+      flex-wrap: wrap;
+      gap: 30px 76px;
+    }
+    @include mobile-big {
+      gap: 30px 20px;
+    }
+}
+&__item {
+  width: 280px;
+
+  @include mobile-big {
+    width: 192px;
+  }
+  @include mobile-small {
+    width: 100%;
+  }
+
+  &:nth-child(3) {
+    @include mobile-small {
+        display: none;
+    }
+  }
+  
+&:nth-child(4) {
+  @include laptop-small {
+        display: none;
+    }
+
+    @include tablet {
+        display: block;
+    }
+    @include mobile-small {
+        display: none;
+    }
+  }
+}
+
+&__review {
+  color: var(--color-dark);
+  font-family: var(--font-family);
+  font-style: italic;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.375;
+  letter-spacing: 0%;
+  text-align: left;
+}
+&__name {
+  color: var(--color-dark);
+  font-family: var(--font-family);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+}
